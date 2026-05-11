@@ -1,6 +1,19 @@
-# 📚 filter() — Primeiro Exercício
+# filter() — Exercício 01
 
-## 📌 Código
+## Enunciado
+
+Crie um array com vários números.
+
+Depois:
+
+- use `filter()`
+- filtre apenas os números pares
+- salve o novo array em uma variável chamada `pares`
+- mostre o resultado no console
+
+---
+
+## Código do aluno
 
 ```js
 const numeros = [1, 2, 3, 4, 5, 6];
@@ -10,186 +23,98 @@ const pares = numeros.filter((numero) => numero % 2 === 0);
 console.log(pares);
 ```
 
-# 🧠 Explicação modo leigo
+---
 
-📌 Array
+## Correção
+
+O código está correto.
 
 ```js
 const numeros = [1, 2, 3, 4, 5, 6];
+
+const pares = numeros.filter((numero) => numero % 2 === 0);
+
+console.log(pares);
 ```
 
-É uma lista.
+---
 
-Imagine:
+## Explicação modo leigo
 
-```caixa:
-[1, 2, 3, 4, 5, 6]
-```
-
-📌 filter()
-
-O filter() percorre cada item do array.
-
-Tipo:
-
-- pega 1
-- pega 2
-- pega 3
-- pega 4
-- pega 5
-- pega 6
-
-📌 numero => numero % 2 === 0
-
-Significa:
-
-```
-pegue cada número
-e verifique se ele é par
-```
-
-# 📌 Operador %
-
-O % pega o resto da divisão.
-
-Exemplo:
+Imagine que o array é uma caixa com vários números:
 
 ```js
-4 % 2;
+[1, 2, 3, 4, 5, 6];
 ```
 
-Resultado:
+O `filter()` funciona como uma peneira. Ele olha para cada item e deixa passar apenas os valores que obedecem a uma regra.
 
-```
-    0
-```
+Neste exercício, a regra é:
 
-Porque:
-
-```
-4 dividido por 2
-não sobra nada
+```txt
+o número precisa ser par
 ```
 
-# 📌 Número par
+A expressão usada para testar isso é:
 
-Se o resultado for:
-
-```
-0
+```js
+numero % 2 === 0;
 ```
 
-Então o número é par.
+O operador `%` pega o resto da divisão. Quando um número dividido por `2` tem resto `0`, ele é par.
 
-📌 Resultado
+O resultado final é:
 
 ```js
 [2, 4, 6];
 ```
 
-# 📚 Como executar
+---
 
-No terminal:
+## Análise técnica
 
-```
-node routine-drills/arrays/filter-01.js
-```
+O método `filter()` percorre todos os itens de um array e retorna um novo array apenas com os itens que passaram no teste da função callback.
 
-🧠 Resultado esperado
-
-```
-[2, 4, 6]
-```
-
-# 📌 O que aprendi
-
-- arrays
-- filter()
-- callback
-- arrow function
-- operador %
-- comparação
-- console.log()
-
-# 📌 Dificuldades
-
-- entender %
-- entender condição
-- entender true e false
-
-# 📌 Analogia
-
-O filter() funciona como uma peneira.
-
-Ele deixa passar apenas os valores que seguem a regra.
-
-Entrada
-
-```
-[1, 2, 3, 4, 5, 6]
-```
-
-# Regra
-
-deixar apenas números pares
-`
-
-# Saída
-
-```
-[2, 4, 6]
-```
-
-# 🚀 Filosofia do Laboratório
-
-```
-Learn → Practice → Refactor → Document → Repeat
-```
-
-# 📖 Learn (Aprender)
-
-Aprender:
-
-- o que é filter()
-- como percorrer arrays
-- como filtrar valores
-
-# ✍️ Practice (Praticar)
-
-Criar exercícios como:
-
-```
-filter-01.js
-filter-02.js
-filter-03.js
-```
-
-🔧 Refactor (Melhorar)
-
-Melhorar o código depois de entender.
-
-Exemplo:
+Neste código:
 
 ```js
-const pares = numeros.filter((n) => n % 2 === 0);
+numeros.filter((numero) => numero % 2 === 0);
 ```
 
-📝 Document (Documentar)
+- `numeros` é o array original
+- `filter()` executa uma função para cada item
+- `numero` representa o item atual
+- `numero % 2 === 0` retorna `true` para números pares
+- `pares` recebe o novo array filtrado
 
-Escrever:
+O array original não é alterado.
 
-o que aprendeu
+---
 
-- dificuldades
-- analogias
-- exemplos
+## Conceitos usados
 
-# 🔁 Repeat (Repetir)
+- array
+- `filter()`
+- callback
+- arrow function
+- operador `%`
+- comparação
+- booleano
+- `console.log`
 
-Repetir até ficar natural.
+---
 
-O objetivo é criar memória técnica e fluência em JavaScript.
+## Checklist de aprendizado
 
-```
+- [ ] Entendi o enunciado
+- [ ] Entendi o array usado
+- [ ] Entendi a função usada
+- [ ] Entendi o retorno
+- [ ] Entendi o `console.log`
+- [ ] Sei explicar esse exercício com minhas palavras
 
-```
+---
+
+## Próximo passo sugerido
+
+Criar o exercício `filter-02.js`, filtrando apenas nomes com mais de cinco letras.

@@ -1,6 +1,34 @@
-# 📚 map() — Primeiro Exercício
+# map() — Exercício 01
 
-## 📌 Código
+## Enunciado
+
+Crie um array com alguns números.
+
+Depois:
+
+- use `map()`
+- dobre cada número do array
+- salve o novo array em uma variável chamada `dobrados`
+- mostre o resultado no console
+
+---
+
+## Código do aluno
+
+```js
+const numeros = [1, 2, 3, 4];
+
+// cria novo array dobrando os números
+const dobrados = numeros.map((numero) => numero * 2);
+
+console.log(dobrados);
+```
+
+---
+
+## Correção
+
+O código está correto.
 
 ```js
 const numeros = [1, 2, 3, 4];
@@ -12,103 +40,30 @@ console.log(dobrados);
 
 ---
 
-# 🧠 Explicação modo leigo
+## Explicação modo leigo
 
-## 📌 Array
-
-```js
-const numeros = [1, 2, 3, 4];
-```
-
-É uma lista.
-
-Imagine:
-
-```text
-caixa:
-[1, 2, 3, 4]
-```
-
----
-
-## 📌 map()
-
-O `map()` percorre cada item do array.
-
-Tipo:
-
-- pega 1
-- pega 2
-- pega 3
-- pega 4
-
----
-
-## 📌 numero => numero \* 2
-
-Significa:
-
-```text
-pegue cada número
-e multiplique por 2
-```
-
----
-
-## 📌 Resultado
-
-```js
-[2, 4, 6, 8];
-```
-
----
-
-# 📚 Como executar
-
-No terminal:
-
-```bash
-node routine-drills/arrays/map-01.js
-```
-
----
-
-# 🧠 Resultado esperado
-
-```bash
-[ 2, 4, 6, 8 ]
-```
-
----
-
-# 📌 O que aprendi
-
-- arrays
-- map()
-- callback
-- arrow function
-- console.log()
-
----
-
-# 📌 Dificuldades
-
-- entender callback
-- entender arrow function
-
----
-
-# 📌 Analogia
-
-O `map()` funciona como uma máquina de transformação.
-
-## Entrada
+Imagine que o array é uma caixa com vários números:
 
 ```js
 [1, 2, 3, 4];
 ```
 
-## Saída
+O `map()` passa por cada número dessa caixa e cria uma nova caixa com os valores transformados.
+
+Neste exercício, a transformação é:
+
+```txt
+pegar cada número e multiplicar por 2
+```
+
+Então:
+
+- `1` vira `2`
+- `2` vira `4`
+- `3` vira `6`
+- `4` vira `8`
+
+O resultado final é:
 
 ```js
 [2, 4, 6, 8];
@@ -116,63 +71,48 @@ O `map()` funciona como uma máquina de transformação.
 
 ---
 
-# 🚀 Filosofia do Laboratório
+## Análise técnica
 
-```text
-Learn → Practice → Refactor → Document → Repeat
-```
+O método `map()` percorre todos os itens de um array e retorna um novo array com o resultado da função callback.
 
----
-
-# 📖 Learn (Aprender)
-
-Aprender:
-
-- o que é `map()`
-- como percorrer arrays
-- como transformar valores
-
----
-
-# ✍️ Practice (Praticar)
-
-Criar exercícios como:
-
-```text
-map-01.js
-map-02.js
-map-03.js
-```
-
----
-
-# 🔧 Refactor (Melhorar)
-
-Melhorar o código depois de entender.
-
-Exemplo:
+Neste código:
 
 ```js
-const dobrados = numeros.map((n) => n * 2);
+numeros.map((numero) => numero * 2);
 ```
 
----
+- `numeros` é o array original
+- `map()` executa uma função para cada item
+- `numero` representa o item atual
+- `numero * 2` é o valor retornado para o novo array
+- `dobrados` recebe o novo array
 
-# 📝 Document (Documentar)
-
-Escrever:
-
-- o que aprendeu
-- dificuldades
-- analogias
-- exemplos
+O array original não é alterado.
 
 ---
 
-# 🔁 Repeat (Repetir)
+## Conceitos usados
 
-Repetir até ficar natural.
-
-O objetivo é criar memória técnica e fluência em JavaScript.
+- array
+- `map()`
+- callback
+- arrow function
+- retorno
+- `console.log`
 
 ---
+
+## Checklist de aprendizado
+
+- [ ] Entendi o enunciado
+- [ ] Entendi o array usado
+- [ ] Entendi a função usada
+- [ ] Entendi o retorno
+- [ ] Entendi o `console.log`
+- [ ] Sei explicar esse exercício com minhas palavras
+
+---
+
+## Próximo passo sugerido
+
+Criar o exercício `map-02.js`, transformando um array de nomes em um novo array com todos os nomes em letras maiúsculas.
